@@ -57,3 +57,32 @@ physicalForm.addEventListener('submit', (event) => {
   `;
   physicalTable.appendChild(physicalRow);
 });
+
+function saveUserInput() {
+  // Get the user input
+  var userInput = document.getElementById("userInput").value;
+
+  // Check if user input is not empty
+  if (userInput.trim() !== "") {
+    // Save the user input in local storage
+    localStorage.setItem("userInput", userInput);
+
+    // Clear the input field
+    document.getElementById("userInput").value = "";
+
+    // Display a success message
+    alert("User input saved successfully!");
+  } else {
+    // Display an error message if user input is empty
+    alert("Please enter some text to save!");
+  }
+}
+
+// Load the saved user input when the page is loaded
+window.onload = function() {
+  var savedUserInput = localStorage.getItem("userInput");
+
+  if (savedUserInput !== null) {
+    document.getElementById("userInput").value = savedUserInput;
+  }
+};
