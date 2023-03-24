@@ -87,3 +87,19 @@ nav ul li{
     background-color: #333;
     color: #fff;
   }
+
+/* goals */
+
+/* Style for the X icon */
+.delete-row::after {
+  content: "X";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Hide the X icon by default */
+.delete-row:hover::after {
+  display: none;
+}

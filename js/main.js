@@ -1,88 +1,96 @@
-// Select the form elements
-const goalForm = document.querySelector('#goals form');
-const moodForm = document.querySelector('#mood-and-mental-health form');
-const physicalForm = document.querySelector('#physical-health form');
+// Get the form and table elements
+const form = document.querySelector('form');
+const table = document.querySelector('table tbody');
 
-// Handle the submission of the goal form
-goalForm.addEventListener('submit', (event) => {
+// Add event listener to form submission
+form.addEventListener('submit', (event) => {
+  // Prevent the default form submission behavior
   event.preventDefault();
-  const goal = goalForm.elements.goal.value;
-  const dueDate = goalForm.elements.dueDate.value;
 
-  // Add the goal to the table
-  const goalTable = document.querySelector('#goals table tbody');
-  const goalRow = document.createElement('tr');
-  goalRow.innerHTML = `
+  // Get the input values
+  const goal = document.querySelector('#goal').value;
+  const dueDate = document.querySelector('#due-date').value;
+
+  // Create a new row with the input values
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
     <td>${goal}</td>
     <td>${dueDate}</td>
     <td>0%</td>
   `;
-  goalTable.appendChild(goalRow);
+
+  // Append the new row to the table
+  table.appendChild(newRow);
+
+  // Reset the form
+  form.reset();
 });
 
-// Handle the submission of the mood form
-moodForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const mood = moodForm.elements.mood.value;
-  const stressLevel = moodForm.elements.stressLevel.value;
-  const date = new Date().toLocaleDateString();
 
-  // Add the mood to the table
-  const moodTable = document.querySelector('#mood-and-mental-health table tbody');
-  const moodRow = document.createElement('tr');
-  moodRow.innerHTML = `
-    <td>${date}</td>
-    <td>${mood}</td>
-    <td>${stressLevel}</td>
-  `;
-  moodTable.appendChild(moodRow);
+
+
+
+//Goals
+
+// Add event listeners to each table row
+let rows = document.querySelectorAll("table tbody tr");
+rows.forEach((row) => {
+  // Show X icon on hover
+  row.addEventListener("mouseover", () => {
+    row.querySelector(".delete-row").style.display = "inline";
+  });
+  // Hide X icon on mouseout
+  row.addEventListener("mouseout", () => {
+    row.querySelector(".delete-row").style.display = "none";
+  });
 });
 
-// Handle the submission of the physical form
-physicalForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const activityLevel = physicalForm.elements.activityLevel.value;
-  const sleepHours = physicalForm.elements.sleepHours.value;
-  const calories = physicalForm.elements.calories.value;
-  const date = new Date().toLocaleDateString();
 
-  // Add the physical health to the table
-  const physicalTable = document.querySelector('#physical-health table tbody');
-  const physicalRow = document.createElement('tr');
-  physicalRow.innerHTML = `
-    <td>${date}</td>
-    <td>${activityLevel}</td>
-    <td>${sleepHours}</td>
-    <td>${calories}</td>
-  `;
-  physicalTable.appendChild(physicalRow);
-});
+// Select the table body
+const tbody = document.querySelector('tbody');
 
-function saveUserInput() {
-  // Get the user input
-  var userInput = document.getElementById("userInput").value;
-
-  // Check if user input is not empty
-  if (userInput.trim() !== "") {
-    // Save the user input in local storage
-    localStorage.setItem("userInput", userInput);
-
-    // Clear the input field
-    document.getElementById("userInput").value = "";
-
-    // Display a success message
-    alert("User input saved successfully!");
-  } else {
-    // Display an error message if user input is empty
-    alert("Please enter some text to save!");
-  }
+// Create a function to delete a row
+function deleteRow(event) {
+  // Get the clicked row
+  const row = event.target.closest('tr');
+  // Remove the row from the table
+  row.remove();
 }
 
-// Load the saved user input when the page is loaded
-window.onload = function() {
-  var savedUserInput = localStorage.getItem("userInput");
-
-  if (savedUserInput !== null) {
-    document.getElementById("userInput").value = savedUserInput;
+// Add a listener for the hover event on the table body
+tbody.addEventListener('mouseover', function(event) {
+  // Get the hovered row
+  const row = event.target.closest('tr');
+  // Check if a row is being hovered
+  if (row) {
+    // Create a delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    // Add a listener for the click event on the delete button
+    deleteButton.addEventListener('click', deleteRow);
+    // Append the delete button to the row
+    row.lastElementChild.appendChild(deleteButton);
   }
-};
+});
+
+// Add a listener for the mouseout event on the table body
+tbody.addEventListener('mouseout', function(event) {
+  // Get the hovered row
+  const row = event.target.closest('tr');
+  // Check if a row is being hovered
+  if (row) {
+    // Remove the delete button from the row
+    row.lastElementChild.removeChild(row.lastElementChild.lastElementChild);
+  }
+});
+
+
+
+// Select the table body and delete modal elements
+const tableBody = document.getElementById('goal-table-body');
+const deleteModal = document.getElementById('delete-modal');
+const deleteConfirmButton = document.getElementById('delete-confirm-button');
+const deleteCancelButton = document.getElementById('delete-cancel-button');
+
+// Add event listener to the delete button for each row
+tableBody.addEventListener('

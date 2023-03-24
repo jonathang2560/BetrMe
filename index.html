@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <title>BetrMe</title>
 </head>
 <body>
@@ -19,16 +21,13 @@
       <li><a href="#mindfulness-and-meditation">Mindfulness and Meditation</a></li>
       <li><a href="#personal-finance">Personal Finance</a></li>
       <li><a href="#personal-development">Personal Development</a></li>
+      <li><a href="#login">Login/Register</a></li>
     </ul>
   </nav>
 
   <!-- Main content -->
   <main>
 
-    <div class="user-info">
-      <input type="text" id="userInput" placeholder="Type here">
-      <button onclick="saveUserInput()">Save</button>
-    </div>
     <!-- Goals section -->
     <section id="goals">
       <h2>Goals</h2>
@@ -54,178 +53,22 @@
         <tbody>
           <!-- Example goal -->
           <tr>
-            <td>Lose 10 pounds</td>
+            <td>Example goal</td>
             <td>01/01/2023</td>
             <td>50%</td>
+            <td><button class="delete-button">Delete</button></td>
           </tr>
         </tbody>
       </table>
+      <!-- <div id="delete-modal" class="modal">
+        <div class="modal-content">
+          <h4>Are you sure you want to delete this goal?</h4>
+          <button id="delete-confirm-button">Yes, delete</button>
+          <button id="delete-cancel-button">Cancel</button>
+        </div>
+      </div> -->
     </section>
-
-    <!-- Mood and mental health section -->
-    <section id="mood-and-mental-health">
-      <h2>Mood and Mental Health</h2>
-      <form>
-        <label for="mood">Mood:</label>
-        <select id="mood" name="mood">
-          <option value="happy">Happy</option>
-          <option value="neutral">Neutral</option>
-          <option value="sad">Sad</option>
-        </select>
-        <br>
-        <label for="stress-level">Stress level:</label>
-        <input type="range" id="stress-level" name="stress-level" min="0" max="10">
-        <br>
-        <input type="submit" value="Submit">
-      </form>
-      <br>
-      <h3>Mood and stress level history:</h3>
-      <table>
-      <thead>
-      <tr>
-      <th>Date</th>
-      <th>Mood</th>
-      <th>Stress level</th>
-      </tr>
-      </thead>
-      <tbody>
-      <!-- Example mood and stress level entry -->
-      <tr>
-      <td>01/01/2023</td>
-      <td>Happy</td>
-      <td>3</td>
-      </tr>
-      </tbody>
-      </table>
-      </section>
-        <!-- Physical health section -->
-  <section id="physical-health">
-    <h2>Physical Health</h2>
-    <form>
-      <label for="activity-level">Activity level:</label>
-      <input type="range" id="activity-level" name="activity-level" min="0" max="10">
-      <br>
-      <label for="sleep-hours">Hours of sleep:</label>
-      <input type="number" id="sleep-hours" name="sleep-hours" min="0" max="24">
-      <br>
-      <label for="calories">Calories:</label>
-      <input type="number" id="calories" name="calories">
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <br>
-    <h3>Physical health history:</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Activity level</th>
-          <th>Hours of sleep</th>
-          <th>Calories</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Example physical health entry -->
-        <tr>
-          <td>01/01/2023</td>
-          <td>7</td>
-          <td>7</td>
-          <td>2000</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Habit building section -->
-  <section id="habit-building">
-    <h2>Habit Building</h2>
-    <form>
-      <label for="habit">Habit:</label>
-      <input type="text" id="habit" name="habit">
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <br>
-    <h3>Habit progress:</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Habit</th>
-          <th>Progress</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Example habit -->
-        <tr>
-          <td>Exercise for 30 minutes every day</td>
-          <td>70%</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Mindfulness and meditation section -->
-  <section id="mindfulness-and-meditation">
-    <h2>Mindfulness and Meditation</h2>
-    <form>
-      <label for="mindfulness-activity">Mindfulness activity:</label>
-      <input type="text" id="mindfulness-activity" name="mindfulness-activity">
-      <br>
-      <label for="meditation-minutes">Meditation minutes:</label>
-      <input type="number" id="meditation-minutes" name="meditation-minutes" min="0">
-      <br>
-      <input type="submit" value="Submit">
-      </form>
-      <br>
-      <h3>Mindfulness and meditation history:</h3>
-      <table>
-      <thead>
-      <tr>
-      <th>Date</th>
-      <th>Mindfulness activity</th>
-      <th>Meditation minutes</th>
-      </tr>
-      </thead>
-      <tbody>
-      <!-- Example mindfulness and meditation entry -->
-      <tr>
-      <td>01/01/2023</td>
-      <td>Breathing exercises</td>
-      <td>15</td>
-      </tr>
-      </tbody>
-      </table>
-      </section>
       </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
