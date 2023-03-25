@@ -90,7 +90,6 @@ nav ul li{
 
 /* goals */
 
-/* Style for the X icon */
 .delete-row::after {
   content: "X";
   color: red;
@@ -99,7 +98,44 @@ nav ul li{
   cursor: pointer;
 }
 
-/* Hide the X icon by default */
+
 .delete-row:hover::after {
+  display: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 40px;
+}
+
+th,
+td {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+.delete-button {
+  visibility: hidden;
+}
+
+tr:hover .delete-button {
+  visibility: visible;
+}
+
+.delete-button::after {
+  content: "Delete";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover::after {
   display: none;
 }
