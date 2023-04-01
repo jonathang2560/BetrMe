@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+        <title>BetrMe</title>
+    </head>
+    <body>
+    <nav>
+    
+        <ul>
+        <li><h1><a href="../index.html">BetrMe</a></h1></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="html/mood.html">Mood and Mental Health</a></li>
+          <li><a href="/html/physical-health.html">Physical Health</a></li>
+          <li><a href="html/habits.html">Habit Building</a></li>
+          <li><a href="#mindfulness-and-meditation">Mindfulness and Meditation</a></li>
+          <li><a href="#personal-finance">Personal Finance</a></li>
+          <li><a href="#personal-development">Personal Development</a></li>
+          <li><a href="#login">Login</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Main content -->
+      <main>
+    
+        <!-- Goals section -->
+        <section id="goals">
+          <h2>Goals</h2>
+          <form>
+            <label for="goal">Goal:</label>
+            <input type="text" id="goal" name="goal">
+            <br>
+            <label for="due-date">Due date:</label>
+            <input type="date" id="due-date" name="due-date">
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+          <br>
+          <h3>Goal progress:</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Goal</th>
+                <th class="goal-date">Due date</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Example goal -->
+              <tr>
+                <td>Example goal</td>
+                <td>01/01/2023</td>
+                <td>50%</td>
+                <td><button class="delete-button"></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+          </main>
+    
+    
+    
+    <script src="js/main.js"></script>
+    </body>
+    </html>
