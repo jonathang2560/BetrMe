@@ -25,17 +25,16 @@ nav ul li{
 
 
 /* breathing exercise */
-
-#background {
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 255, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main p{
+    width: 50%;
+    text-align: center;
+    margin-top: 5%;
 }
 #circle {
     width: 150px;
@@ -47,16 +46,40 @@ nav ul li{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    animation-fill-mode: forwards;
+    margin-top: 4%;
 }
-#startButton {
-    font-size: 32px;
+
+
+@keyframes expand {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes hold {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1.5);
+        background-color: red;
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+#message,#startButton {
     color: white;
-}
-#message {
-    position: absolute;
-    top: 60px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
-}
+    font-size: 25px;
+  }
+  
