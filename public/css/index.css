@@ -28,20 +28,24 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   }
   
   .info h1 {
     font-size: 32px;
-    width: 40%;
-    margin-left: 5%;
+    /* width: 40%; */
+    margin-left: 10%;  
+  }
+  .info p{
+    margin-left: 10%;
+    width: 70%;
   }
   
   img {
     height: 400px;
     width: 650px;
     border-radius: 15px;
-    margin-left: 10%;
+    margin-left: 15%;
   }
   
   .buttons {
@@ -49,8 +53,8 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    width: 40%;
-    margin-left: 4%;
+    width: 45%;
+    margin-left: 10%;
   }
   
    button {
@@ -61,7 +65,6 @@ main {
     border: none;
     border-radius: 4px;
     padding: 12px 24px;
-    margin: 0 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
@@ -75,4 +78,43 @@ main {
     outline: none;
     box-shadow: 0 0 0 3px rgba(55, 179, 249, 0.4);
   }
-  
+
+
+
+
+
+
+
+
+
+
+
+/* about-us */
+
+.about-us {
+  margin: 15% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.section {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 5px;
+}
