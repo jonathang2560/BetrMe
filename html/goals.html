@@ -22,46 +22,18 @@
   </ul>
 </nav>
     
-      <!-- Main content -->
-      <main>
-    
-        <!-- Goals section -->
-        <section id="goals">
-          <h2>Goals</h2>
-          <form>
-            <label for="goal">Goal:</label>
-            <input type="text" id="goal" name="goal">
-            <br>
-            <label for="due-date">Due date:</label>
-            <input type="date" id="due-date" name="due-date">
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>
-          <br>
-          <h3>Goal progress:</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Goal</th>
-                <th class="goal-date">Due date</th>
-                <th>Progress</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Example goal -->
-              <tr>
-                <td>Example goal</td>
-                <td>01/01/2023</td>
-                <td>50%</td>
-                <td><button class="delete-button"></button></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-          </main>
+  <h1>Goal Tracker</h1>
+  <label for="goal">Enter a new goal:</label>
+  <input type="text" id="goal">
+  <label for="deadline">Set a deadline:</label>
+  <input type="date" id="deadline">
+  <button onclick="addGoal()">Add Goal</button>
+  <h2>Goals</h2>
+  <ul id="goalList">
+  </ul>
     
     
     
-    <script src="js/main.js"></script>
-    </body>
-    </html>
+    <script src="../js/goals.js"></script>
+  </body>
+</html>
