@@ -64,7 +64,7 @@ main {
     background-color: #287cbd;
     border: none;
     border-radius: 4px;
-    padding: 12px 24px;
+    padding: 8px 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
