@@ -72,3 +72,9 @@
   .delete:hover {
     background-color: rgb(216, 4, 4);
   }
+
+  .error {
+    color: red;
+    padding: 4px;
+    margin: 0 auto;
+  }
