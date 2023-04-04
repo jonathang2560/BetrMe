@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/goals.css">
     <title>BetrMe</title>
 </head>
 <body>
@@ -21,15 +22,14 @@
     <li><a href="#login">Login</a></li>
   </ul>
 </nav>
-    
-  <h1>Goal Tracker</h1>
-  <label for="goal">Enter a new goal:</label>
-  <input type="text" id="goal">
-  <label for="deadline">Set a deadline:</label>
-  <input type="date" id="deadline">
-  <button onclick="addGoal()">Add Goal</button>
-  <h2>Goals</h2>
-  <ul id="goalList">
+  <div class="tracker">
+    <h1>Goal Tracker</h1>
+    <label for="goal">Enter a new goal:<input class ="goals"type="text" id="goal"></label>
+    <label for="deadline">Set a deadline:<input type="date" id="deadline"></label>
+    <button class="addGoal"onclick="addGoal()">Add Goal</button>
+    <h2>Goals:</h2>
+    <ul id="goalList">
+  </div>
   </ul>
     
     
