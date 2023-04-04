@@ -7,33 +7,31 @@
     <link rel="stylesheet" type="text/css" href="../public/css/nav.css">
     <link rel="stylesheet" type="text/css" href="../public/css/goals.css">
     <title>BetrMe</title>
-</head>
-<body>
-<nav>
-  <ul>
-    <li><a href="goals.html">Goals</a></li>
-    <li><a href="mood.html">Mood and Mental Health</a></li>
-    <li><a href="physical-health.html">Physical Health</a></li>
-    <li><a href="habits.html">Habit Building</a></li>
-    <li><h1><a href="../index.html">BetrMe</a></h1></li>
-    <li><a href="mindfulness.html">Mindfulness and Meditation</a></li>
-    <li><a href="finance.html">Personal Finance</a></li>
-    <li><a href="development.html">Personal Development</a></li>
-    <li><a href="#login">Login</a></li>
-  </ul>
-</nav>
-  <div class="tracker">
-    <h1>Goal Tracker</h1>
-    <label for="goal">Enter a new goal:<input class ="goals"type="text" id="goal"></label>
-    <label for="deadline">Set a deadline:<input type="date" id="deadline"></label>
-    <button class="addGoal"onclick="addGoal()">Add Goal</button>
-    <h2>Goals:</h2>
-    <ul id="goalList">
-  </div>
-  </ul>
-    
-    
-    
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="goals.html">Goals</a></li>
+        <li><a href="mood.html">Mood and Mental Health</a></li>
+        <li><a href="physical-health.html">Physical Health</a></li>
+        <li><a href="habits.html">Habit Building</a></li>
+        <li><h1><a href="../index.html">BetrMe</a></h1></li>
+        <li><a href="mindfulness.html">Mindfulness and Meditation</a></li>
+        <li><a href="finance.html">Personal Finance</a></li>
+        <li><a href="development.html">Personal Development</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+    <div class="tracker">
+      <h1>Goal Tracker</h1>
+      <label for="goal">Enter a new goal:<input class ="goals" type="text" id="goal"></label>
+      <label for="deadline">Set a deadline:<input type="date" id="deadline"></label>
+      <button class="addGoal" onclick="addGoal()">Add Goal</button>
+      <p id="error" class="error"></p>
+      <h2>Goals:</h2>
+      <ul id="goalList">
+      </ul>
+    </div>
     <script src="../js/goals.js"></script>
   </body>
 </html>

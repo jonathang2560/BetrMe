@@ -26,6 +26,7 @@
     /* right: -40px; */
     visibility: hidden;
     background-color: red;
+    text-align: right;
 
   }
   
@@ -48,22 +49,26 @@
   }
 
   
-  button:hover {
+  .addGoal:hover {
     background-color: #2E90D9;
   }
-  .addGoal{
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #287cbd;
-    border: none;
-    border-radius: 4px;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
+
 
   
   button:hover {
     background-color: #2E90D9;
+  }
+  .delete{
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .delete:hover {
+    background-color: rgb(216, 4, 4);
   }
